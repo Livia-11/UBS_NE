@@ -163,16 +163,6 @@ CREATE DATABASE ubs_db;
 
 2. Update `src/main/resources/application.properties` if your PostgreSQL username or password differs:
 
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/ubs_db
-spring.datasource.username=postgres
-spring.datasource.password=postgre
-spring.mail.username=kirezilivia@gmail.com
-spring.mail.password=azud cvfk puvq kiat
-app.admin.email=kirezilivia@gmail.com
-app.admin.bootstrap-password=Admin@12345
-```
-
 3. Run the application:
 
 ```bash
@@ -187,7 +177,7 @@ http://localhost:8080/swagger-ui.html
 
 ## Suggested Test Order
 
-1. Start the app. If no admin exists, `kirezilivia@gmail.com` is created as `ROLE_ADMIN` with temporary password `Admin@12345`.
+1. Start the app. If no admin exists, `admin@example.com` is created as `ROLE_ADMIN` with temporary password `Admin@12345`.
 2. Login with `POST /api/auth/login`.
 3. Use the returned JWT in Swagger Authorize as `Bearer <token>`.
 4. If `mustChangePassword` is `true`, call `POST /api/auth/change-password`.
